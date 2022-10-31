@@ -48,7 +48,7 @@ onMounted(()=>{
       </div>
     </div>
 
-    <div class="w-screen bg-gray-100 px-80 pt-44 text-zinc-900">
+    <div class="w-screen bg-gray-100 px-48 pt-44 text-zinc-900">
       <h2 class="text-3xl font-bold">Introduction</h2>
       <p class="mt-10 text-xl">
         Aujourd’hui, le vélo ne représente que 3% des trajets. Le Plan vélo,
@@ -71,14 +71,14 @@ onMounted(()=>{
             freins identifiés.
           </p>
         </div>
-        <div class="flex-shrink-0 w-3/5 h-96 flex-grow">
+        <div class="flex-shrink-0 w-3/4 h-96 flex-grow">
           <BarDept/>
         </div>
       </div>
 
 
       <div class="flex flex-row mt-32 gap-20 items-center" ref="div2">
-        <div class="flex-shrink-0 w-3/5 h-96 flex-grow">
+        <div class="flex-shrink-0 w-3/4 h-96 flex-grow">
           <BarType/>
         </div>
         <div class="flex flex-col gap-10 flex-shrink">
@@ -103,7 +103,7 @@ onMounted(()=>{
             freins identifiés.
           </p>
         </div>
-        <div class="flex-shrink-0 w-3/5 h-96 flex-grow">
+        <div class="flex-shrink-0 w-3/4 h-96 flex-grow">
           <BarRoute/>
         </div>
       </div>
