@@ -1,5 +1,8 @@
 <script setup>
 import Polygon from "@/components/Polygon.vue";
+import BarDept from "@/components/BarDept.vue";
+import BarType from "@/components/BarType.vue";
+import BarRoute from "@/components/BarRoute.vue";
 import {ref, onMounted} from 'vue'
 
 const observer = new IntersectionObserver((entries)=>{
@@ -68,12 +71,16 @@ onMounted(()=>{
             freins identifiés.
           </p>
         </div>
-        <div class="bg-gray-500 flex-shrink-0 w-3/5 h-96 flex-grow"></div>
+        <div class="flex-shrink-0 w-3/5 h-96 flex-grow">
+          <BarDept/>
+        </div>
       </div>
 
 
       <div class="flex flex-row mt-32 gap-20 items-center" ref="div2">
-        <div class="bg-gray-500 flex-shrink-0 w-3/5 h-96 flex-grow"></div>
+        <div class="flex-shrink-0 w-3/5 h-96 flex-grow">
+          <BarType/>
+        </div>
         <div class="flex flex-col gap-10 flex-shrink">
           <h2 class="text-3xl font-bold">Introduction</h2>
           <p class=" text-lg">
@@ -96,8 +103,22 @@ onMounted(()=>{
             freins identifiés.
           </p>
         </div>
-        <div class="bg-gray-500 flex-shrink-0 w-3/5 h-96 flex-grow"></div>
+        <div class="flex-shrink-0 w-3/5 h-96 flex-grow">
+          <BarRoute/>
+        </div>
       </div>
+
+      <h2 class="text-3xl font-bold mt-32">Introduction</h2>
+      <p class="mt-10 text-xl">
+        Aujourd’hui, le vélo ne représente que 3% des trajets. Le Plan vélo,
+        présenté par le Gouvernement en septembre 2018, vise à encourager le
+        développement de ce mode de déplacement en levant les principaux freins
+        identifiés. Il prévoit ainsi des actions réparties en quatre axes, parmi
+        lesquels l’amélioration de la sécurité routière par le développement
+        d’aménagements cyclables. L’objectif fixé était ainsi d’atteindre 55 477
+        km d’aménagements cyclables sécurisés (pistes cyclables et voies vertes)
+        en 2022.
+      </p>
     </div>
   </div>
 </template>
