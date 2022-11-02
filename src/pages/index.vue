@@ -69,8 +69,8 @@ onMounted(() => {
           <p class="text-base">
             Depuis 2005, on peut remarquer que le département le plus touché par
             les accidents de vélo est le 75, donc Paris. En effet, c'est la
-            capitale, il y a beaucoup d'habitant donc plus d'accidents. Mais on
-            retrouve également un grand nombre d'accidents dans les département
+            capitale, il y a beaucoup d'habitants donc plus d'accidents. Mais on
+            retrouve également un grand nombre d'accidents dans les départements
             des grandes métropoles de France, ainsi la Gironde (33), le Rhône
             (69), ou encore le Nord (59) cumulent plus de 2000 accidents chacun.
           </p>
@@ -88,11 +88,11 @@ onMounted(() => {
           <h2 class="text-3xl font-bold">Type d'intersections</h2>
           <p class="text-base">
             A première vue, on pourrait penser que les intersections sont les
-            lieus les plus propices aux accidents de vélo. cependant, on se rend
+            lieux les plus propices aux accidents de vélo. Cependant, on se rend
             compte que la majorité des accidents surviennent hors des
             intersections et ce, même dans le 75. C'est donc peut-être hors des
             intersections que la vigilance des usagers de la route est plus
-            faible ce qui rend ces lieus plus propices aux accidents. En effet,
+            faible ce qui rend ces lieux plus propices aux accidents. En effet,
             de manière générale, lorsqu'on arrive à une intersection, on fait
             plus attention aux autres.
           </p>
@@ -105,11 +105,11 @@ onMounted(() => {
           <p class="text-base">
             Les routes sur lesquelles il se produit le plus d'accidents sont les
             voies communales et les routes départementales. Il y a beaucoup plus
-            de blessé léger sur les voies communales, comme la vitesse est
+            de blessés légers sur les voies communales, comme la vitesse est
             réduite en ville, les accidents sont moins graves. Cependant, il y a
             quand même plus de 9000 accidents qui ont nécéssité une
             hospitalisation sur route départementale et concernant le nombre de
-            mort il est majoritaire sur ce type de route. Les routes
+            morts, il est majoritaire sur ce type de route. Les routes
             départementales ne sont donc pas les routes avec le plus d'accidents
             mais celles avec les accidents les plus graves.
           </p>
@@ -121,13 +121,11 @@ onMounted(() => {
 
       <h2 class="mt-32 text-3xl font-bold">Conclusion</h2>
       <p class="mt-10 text-xl">
-        Comme on a pu le voir à travers cette analyse, de manière globale, les
-        accidents surviennent beaucoup dans les départements des métropoles de
-        France et à plus forte raison dans la capitale. Ces accidents se
-        produisent en majorité hors des intersections, entrainant des blessés
-        légers en grande partie sur les voies communales et des blessés plus
-        graves aussi bien sur les routes départementales que les voies
-        communales.
+        Cette analyse a montré que, de manière globale, les accidents
+        surviennent beaucoup plus dans les départements des grandes métropoles
+        de France. Ces accidents se produisent en majorité hors des
+        intersections, entrainant des blessés légers sur les voies communales et
+        des blessés plus graves sur les routes départementales.
       </p>
       <p class="mt-5 text-xl">
         Pour réduire les accidents à vélo et améliorer la sécurité routière, il
