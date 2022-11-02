@@ -182,7 +182,7 @@ const paris = () => {
       />
     </div>
     <div v-else>
-      <div class="flex items-center justify-center">
+      <div class="flex items-center justify-center mt-32">
         <div
           class="spinner-border inline-block h-8 w-8 animate-spin rounded-full border-4"
           role="status"

@@ -53,16 +53,16 @@ const propChart = defineProps({
 // Données du graphique
 // Au moins déclarer les structures de base
 let chartData = reactive({
-  labels: ["Blessé hospitalisé", "Tué"],
+  labels: ["Blessé léger", "Blessé hospitalisé", "Tué"],
   datasets: [
     {
-      backgroundColor: ["rgba(19,80,58, 0.6)", "rgba(19,80,58, 0.4)"],
+      backgroundColor: ["rgba(19,80,58, 0.8)", "rgba(19,80,58, 0.6)", "rgba(19,80,58, 0.4)"],
     },
     {
-      backgroundColor: ["rgba(19,36,80, 0.6)", "rgba(19,36,80, 0.4)"],
+      backgroundColor: ["rgba(19,36,80, 0.8)", "rgba(19,36,80, 0.6)", "rgba(19,36,80, 0.4)"],
     },
     {
-      backgroundColor: ["rgba(67,67,67, 0.6)", "rgba(67,67,67, 0.4)"],
+      backgroundColor: ["rgba(67,67,67, 0.8)", "rgba(67,67,67, 0.6)", "rgba(67,67,67, 0.4)"],
     },
   ],
 });
@@ -80,7 +80,7 @@ const chartOptions = reactive({
 });
 
 let liste = ref();
-let codeLabels = ["2 - Blessé hospitalisé", "3 - Tué"];
+let codeLabels = ["1 - Blessé léger", "2 - Blessé hospitalisé", "3 - Tué"];
 let loading = ref()
 loading.value = false
 
@@ -145,7 +145,7 @@ onMounted(async () => {
       />
     </div>
     <div v-else>
-      <div class="flex items-center justify-center">
+      <div class="flex items-center justify-center mt-32">
         <div
           class="spinner-border inline-block h-8 w-8 animate-spin rounded-full border-4"
           role="status"
