@@ -76,6 +76,9 @@ baseColor.value = "rgba(19,36,80,#deg#)";
 
 let enabled = ref(false)
 
+let loading = ref()
+loading.value = false
+
 
 const couleur = () => {
   let bgColor, bdColor;
@@ -89,6 +92,7 @@ onMounted(async () => {
     .then((response) => response.json())
     .then((response) => {
       liste.value = response;
+      loading.value = true
       console.log("liste", liste);
       // Titre du graphique
       chartOptions.plugins.title.text = "Accidents par type d'intersections";
@@ -152,29 +156,41 @@ const paris = () => {
 
 <template>
   <div>
-    <div class="flex flex-row gap-3">
-        <Switch
-          v-model="enabled"
-          :class="enabled ? 'bg-blue-600' : 'bg-gray-200'"
-          class="relative inline-flex h-6 w-11 items-center rounded-full"
-          @click="select(enabled)"
-          ><span
-            :class="enabled ? 'translate-x-6' : 'translate-x-1'"
-            class="inline-block h-4 w-4 transform rounded-full bg-white transition"
-        /></Switch>
-        <div class="text-zinc-900 text-base">Seulement dans le 75</div>
+    <div v-if="loading">
+      <div class="flex flex-row gap-3">
+          <Switch
+            v-model="enabled"
+            :class="enabled ? 'bg-blue-600' : 'bg-gray-200'"
+            class="relative inline-flex h-6 w-11 items-center rounded-full"
+            @click="select(enabled)"
+            ><span
+              :class="enabled ? 'translate-x-6' : 'translate-x-1'"
+              class="inline-block h-4 w-4 transform rounded-full bg-white transition"
+          /></Switch>
+          <div class="text-zinc-900 text-base">Seulement dans le 75</div>
+      </div>
+      <Bar
+        :chart-options="chartOptions"
+        :chart-data="chartData"
+        :chart-id="chartId"
+        :dataset-id-key="datasetIdKey"
+        :plugins="plugins"
+        :css-classes="cssClasses"
+        :styles="styles"
+        :width="width"
+        :height="height"
+      />
     </div>
-    <Bar
-      :chart-options="chartOptions"
-      :chart-data="chartData"
-      :chart-id="chartId"
-      :dataset-id-key="datasetIdKey"
-      :plugins="plugins"
-      :css-classes="cssClasses"
-      :styles="styles"
-      :width="width"
-      :height="height"
-    />
+    <div v-else>
+      <div class="flex items-center justify-center">
+        <div
+          class="spinner-border inline-block h-8 w-8 animate-spin rounded-full border-4"
+          role="status"
+        >
+          <span class="visually-hidden">Loading...</span>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 

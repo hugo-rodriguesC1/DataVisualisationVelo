@@ -56,13 +56,13 @@ let chartData = reactive({
   labels: ["Blessé hospitalisé", "Tué"],
   datasets: [
     {
-      backgroundColor: ["rgba(223, 91, 49, 0.6)", "rgba(223, 91, 49, 0.4)"],
+      backgroundColor: ["rgba(19,80,58, 0.6)", "rgba(19,80,58, 0.4)"],
     },
     {
-      backgroundColor: ["rgba(49, 223, 67, 0.6)", "rgba(49, 223, 67, 0.4)"],
+      backgroundColor: ["rgba(19,36,80, 0.6)", "rgba(19,36,80, 0.4)"],
     },
     {
-      backgroundColor: ["rgba(178, 49, 223, 0.6)", "rgba(178, 49, 223, 0.4)"],
+      backgroundColor: ["rgba(67,67,67, 0.6)", "rgba(67,67,67, 0.4)"],
     },
   ],
 });
@@ -81,6 +81,8 @@ const chartOptions = reactive({
 
 let liste = ref();
 let codeLabels = ["2 - Blessé hospitalisé", "3 - Tué"];
+let loading = ref()
+loading.value = false
 
 const couleur = (ColorBase, numData) => {
   let bgColor, bdColor;
@@ -94,6 +96,7 @@ onMounted(async () => {
     .then((response) => response.json())
     .then((response) => {
       liste.value = response;
+      loading.value = true
       console.log("liste", liste);
       // Titre du graphique
       chartOptions.plugins.title.text =
@@ -128,17 +131,29 @@ onMounted(async () => {
 
 <template>
   <div>
-    <Bar
-      :chart-options="chartOptions"
-      :chart-data="chartData"
-      :chart-id="chartId"
-      :dataset-id-key="datasetIdKey"
-      :plugins="plugins"
-      :css-classes="cssClasses"
-      :styles="styles"
-      :width="width"
-      :height="height"
-    />
+    <div v-if="loading">
+      <Bar
+        :chart-options="chartOptions"
+        :chart-data="chartData"
+        :chart-id="chartId"
+        :dataset-id-key="datasetIdKey"
+        :plugins="plugins"
+        :css-classes="cssClasses"
+        :styles="styles"
+        :width="width"
+        :height="height"
+      />
+    </div>
+    <div v-else>
+      <div class="flex items-center justify-center">
+        <div
+          class="spinner-border inline-block h-8 w-8 animate-spin rounded-full border-4"
+          role="status"
+        >
+          <span class="visually-hidden">Loading...</span>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
