@@ -66,7 +66,7 @@ onMounted(() => {
       <div class="mt-32 flex flex-row items-center gap-20" ref="div1">
         <div class="flex flex-shrink flex-col gap-10">
           <h2 class="text-3xl font-bold">Départements les plus concernés</h2>
-          <p class="text-lg">
+          <p class="text-base">
             Depuis 2005, on peut remarquer que le département le plus touché par
             les accidents de vélo est le 75, donc Paris. En effet, c'est la
             capitale, il y a beaucoup d'habitant donc plus d'accidents. Mais on
@@ -86,7 +86,7 @@ onMounted(() => {
         </div>
         <div class="flex flex-shrink flex-col gap-10">
           <h2 class="text-3xl font-bold">Type d'intersections</h2>
-          <p class="text-lg">
+          <p class="text-base">
             A première vue, on pourrait penser que les intersections sont les
             lieus les plus propices aux accidents de vélo. cependant, on se rend
             compte que la majorité des accidents surviennent hors des
@@ -102,7 +102,7 @@ onMounted(() => {
       <div class="mt-32 flex flex-row items-center gap-20" ref="div3">
         <div class="flex flex-shrink flex-col gap-10">
           <h2 class="text-3xl font-bold">Gravité des accidents</h2>
-          <p class="text-lg">
+          <p class="text-base">
             Les routes sur lesquelles il se produit le plus d'accidents sont les
             voies communales et les routes départementales. Il y a beaucoup plus
             de blessé léger sur les voies communales, comme la vitesse est
