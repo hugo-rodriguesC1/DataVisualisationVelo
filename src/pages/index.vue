@@ -130,19 +130,18 @@ onMounted(() => {
       <p class="mt-5 text-xl">
         Pour réduire les accidents à vélo et améliorer la sécurité routière, il
         faudrait donc concentrer les aménagements des infrastructures cyclables
-        sur les voies communales et les routes départementales au abords des
+        sur les voies communales et les routes départementales aux abords des
         métropoles.
       </p>
     </div>
     <div
       class="mt-32 flex h-36 w-screen items-center justify-center bg-[#13503A] text-gray-100"
     >
-      Analyse réalisé grâce à la
-      <a
+      Analyse réalisée grâce à la&nbsp<a class="underline hover:text-blue-200"
         href="https://www.data.gouv.fr/fr/datasets/bases-de-donnees-annuelles-des-accidents-corporels-de-la-circulation-routiere-annees-de-2005-a-2021/"
-        >base de données des accidents corporels</a
-      >
-      impliquant une personne à vélo pour la période 2005 - 2017
+        > base de données des accidents corporels </a
+      > 
+      &nbspimpliquant une personne à vélo pour la période 2005 - 2017
     </div>
   </div>
 </template>
